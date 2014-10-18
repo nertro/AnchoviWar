@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public bool IsFast = false;
     public bool IsSlow = false;
     public float SlowTimer;
+    public GameObject MyGUI;
 
     enum ItemType { Fast, Slow, RespawnBase, Invinceble, Banana, None }
     ItemType currentItem;
@@ -40,8 +41,8 @@ public class Player : MonoBehaviour {
     {
         if (other.gameObject.tag == "Anchovi")
         {
-            Debug.Log("bumms");
             HasAnchovi = true;
+            MyGUI.GetComponent<GameGUI>().AnchoviSprite.SetActive(true);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Item" &! HasItem)
@@ -53,7 +54,6 @@ public class Player : MonoBehaviour {
                 if (itemSpawns[i].transform.position == other.transform.position)
                 {
                     itemSpawns[i].GetComponent<SpawnPoint>().HasItem = false;
-                    Debug.Log("Collected");
                 }
             }
             Destroy(other.gameObject);
@@ -61,6 +61,7 @@ public class Player : MonoBehaviour {
         else if (other.gameObject.tag == "Pizza" && HasAnchovi)
         {
             AddOneToScore();
+            MyGUI.GetComponent<GameGUI>().AnchoviSprite.SetActive(false);
             HasAnchovi = false;
             gameManager.ReSpawnPizza();
             gameManager.SpawnAnchovis(GameObject.FindGameObjectWithTag("AnchoviBase").transform.position);
@@ -69,10 +70,10 @@ public class Player : MonoBehaviour {
 
     void PickUpItem()
     {
-        int rand = Random.Range(0, 4);
-        ItemType newType = (ItemType)rand;
-        currentItem = newType;
-        Debug.Log(currentItem);
+            int rand = Random.Range(0, 5);
+            ItemType newType = (ItemType)rand;
+            currentItem = newType;
+            MyGUI.GetComponent<GameGUI>().ActivateItemSprite((int)currentItem);
     }
 
     void UseItem()
@@ -122,12 +123,16 @@ public class Player : MonoBehaviour {
                     && gameManager.Players[i] != this.gameObject
                     &! gameManager.Players[i].GetComponent<Player>().IsInvinceble)
                 {
+                    gameManager.Players[i].GetComponent<Player>().MyGUI.GetComponent<GameGUI>().AnchoviSprite.SetActive(false);
+                    gameManager.Players[i].GetComponent<Player>().HasAnchovi = false;
                     gameManager.SpawnAnchovis(gameManager.Players[i].transform.position);
                     gameManager.SpawnPlayer(i);
                 }
             }
         }
 
+        MyGUI.GetComponent<GameGUI>().DeactivateItemSprite((int)currentItem);
+        currentItem = ItemType.None;
         HasItem = false;
     }
 
@@ -136,7 +141,6 @@ public class Player : MonoBehaviour {
         if (Input.GetAxis("Fire1") >= 1 && HasItem)
         {
             UseItem();
-            Debug.Log("using");
         }
         if (IsFast)
         {
