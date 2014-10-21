@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: c05aaf899b49e6f4b95a49008561ef80
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: jnt_ankle_L
+    100002: jnt_ankle_R
+    100004: jnt_body
+    100006: jnt_chest
+    100008: jnt_claw_L
+    100010: jnt_claw_R
+    100012: jnt_elbow_L
+    100014: jnt_elbow_R
+    100016: jnt_head
+    100018: jnt_hip_L
+    100020: jnt_hip_R
+    100022: jnt_knee_L
+    100024: jnt_knee_R
+    100026: jnt_lowerNeck
+    100028: jnt_shoulder_L
+    100030: jnt_shoulder_R
+    100032: jnt_tentacle1_high
+    100034: jnt_tentacle1_lo
+    100036: jnt_tentacle2_high
+    100038: jnt_tentacle2_lo
+    100040: jnt_tentacle3_high
+    100042: jnt_tentacle3_lo
+    100044: jnt_tentacle4_high
+    100046: jnt_tentacle4_lo
+    100048: jnt_toe_L
+    100050: jnt_toe_R
+    100052: jnt_upperNeck
+    100054: jnt_wrist_L
+    100056: jnt_wrist_R
+    100058: joint12
+    100060: joint3
+    100062: joint6
+    100064: joint9
+    100066: mesh_zoidBerg
+    100068: //RootNode
+    400000: jnt_ankle_L
+    400002: jnt_ankle_R
+    400004: jnt_body
+    400006: jnt_chest
+    400008: jnt_claw_L
+    400010: jnt_claw_R
+    400012: jnt_elbow_L
+    400014: jnt_elbow_R
+    400016: jnt_head
+    400018: jnt_hip_L
+    400020: jnt_hip_R
+    400022: jnt_knee_L
+    400024: jnt_knee_R
+    400026: jnt_lowerNeck
+    400028: jnt_shoulder_L
+    400030: jnt_shoulder_R
+    400032: jnt_tentacle1_high
+    400034: jnt_tentacle1_lo
+    400036: jnt_tentacle2_high
+    400038: jnt_tentacle2_lo
+    400040: jnt_tentacle3_high
+    400042: jnt_tentacle3_lo
+    400044: jnt_tentacle4_high
+    400046: jnt_tentacle4_lo
+    400048: jnt_toe_L
+    400050: jnt_toe_R
+    400052: jnt_upperNeck
+    400054: jnt_wrist_L
+    400056: jnt_wrist_R
+    400058: joint12
+    400060: joint3
+    400062: joint6
+    400064: joint9
+    400066: mesh_zoidBerg
+    400068: //RootNode
+    4300000: mesh_zoidBerg
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: mesh_zoidBerg
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jnt_body
+        weight: 1
+      - path: jnt_body/jnt_chest
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle1_high
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle1_high/jnt_tentacle1_lo
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle1_high/jnt_tentacle1_lo/joint3
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle2_high
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle2_high/jnt_tentacle2_lo
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle2_high/jnt_tentacle2_lo/joint6
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle3_high
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle3_high/jnt_tentacle3_lo
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle3_high/jnt_tentacle3_lo/joint9
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle4_high
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle4_high/jnt_tentacle4_lo
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_lowerNeck/jnt_upperNeck/jnt_head/jnt_tentacle4_high/jnt_tentacle4_lo/joint12
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_L
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_L/jnt_elbow_L
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_L/jnt_elbow_L/jnt_wrist_L
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_L/jnt_elbow_L/jnt_wrist_L/jnt_claw_L
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_R
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_R/jnt_elbow_R
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_R/jnt_elbow_R/jnt_wrist_R
+        weight: 1
+      - path: jnt_body/jnt_chest/jnt_shoulder_R/jnt_elbow_R/jnt_wrist_R/jnt_claw_R
+        weight: 1
+      - path: jnt_body/jnt_hip_L
+        weight: 1
+      - path: jnt_body/jnt_hip_L/jnt_knee_L
+        weight: 1
+      - path: jnt_body/jnt_hip_L/jnt_knee_L/jnt_ankle_L
+        weight: 1
+      - path: jnt_body/jnt_hip_L/jnt_knee_L/jnt_ankle_L/jnt_toe_L
+        weight: 1
+      - path: jnt_body/jnt_hip_R
+        weight: 1
+      - path: jnt_body/jnt_hip_R/jnt_knee_R
+        weight: 1
+      - path: jnt_body/jnt_hip_R/jnt_knee_R/jnt_ankle_R
+        weight: 1
+      - path: jnt_body/jnt_hip_R/jnt_knee_R/jnt_ankle_R/jnt_toe_R
+        weight: 1
+      - path: mesh_zoidBerg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

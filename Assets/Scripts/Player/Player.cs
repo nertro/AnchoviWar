@@ -81,6 +81,7 @@ public class Player : MonoBehaviour {
         if (currentItem == ItemType.Fast)
         {
             IsFast = true;
+            MyGUI.GetComponent<GameGUI>().ActivateStateSprite(0);
             controller.walkSpeed *= 2;
             fastTimer = 0;
             if (IsSlow)
@@ -96,12 +97,14 @@ public class Player : MonoBehaviour {
             {
                 if (gameManager.Players[i] != this.gameObject &! gameManager.Players[i].GetComponent<Player>().IsInvinceble)
                 {
+                    gameManager.Players[i].GetComponent<Player>().MyGUI.GetComponent<GameGUI>().ActivateStateSprite(1);
                     gameManager.Players[i].GetComponent<ThirdPersonControllerC>().walkSpeed /= 2;
                     gameManager.Players[i].GetComponent<Player>().IsSlow = true;
                     gameManager.Players[i].GetComponent<Player>().SlowTimer = 0;
                     if (gameManager.Players[i].GetComponent<Player>().IsFast)
                     {
                         gameManager.Players[i].GetComponent<Player>().IsFast = false;
+                        gameManager.Players[i].GetComponent<Player>().MyGUI.GetComponent<GameGUI>().DeactivateStateSprite(0);
                         gameManager.Players[i].GetComponent<ThirdPersonControllerC>().walkSpeed /= 2;
                     }
                 }
@@ -114,6 +117,7 @@ public class Player : MonoBehaviour {
         else if (currentItem == ItemType.Invinceble)
         {
             IsInvinceble = true;
+            MyGUI.GetComponent<GameGUI>().ActivateStateSprite(2);
         }
         else if (currentItem == ItemType.Banana)
         {
@@ -138,8 +142,9 @@ public class Player : MonoBehaviour {
 
     void UpdateItem()
     {
-        if (Input.GetAxis("Fire1") >= 1 && HasItem)
+        if (Input.GetAxis(this.gameObject.name+" Fire1") >= 1 && HasItem)
         {
+            Debug.Log(gameObject.name);
             UseItem();
         }
         if (IsFast)
@@ -148,6 +153,7 @@ public class Player : MonoBehaviour {
             if (fastTimer >= itemDelay)
             {
                 IsFast = false;
+                MyGUI.GetComponent<GameGUI>().DeactivateStateSprite(0);
                 controller.walkSpeed /= 2;
                 fastTimer = 0;
             }
@@ -158,6 +164,7 @@ public class Player : MonoBehaviour {
             if (SlowTimer >= itemDelay)
             {
                 IsSlow = false;
+                MyGUI.GetComponent<GameGUI>().DeactivateStateSprite(1);
                 controller.walkSpeed *= 2;
                 SlowTimer = 0;
             }
@@ -168,6 +175,7 @@ public class Player : MonoBehaviour {
             if (invincebleTimer >= itemDelay)
             {
                 IsInvinceble = false;
+                MyGUI.GetComponent<GameGUI>().DeactivateStateSprite(2);
                 invincebleTimer = 0;
             }
         }

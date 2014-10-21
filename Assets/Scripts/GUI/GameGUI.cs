@@ -5,6 +5,7 @@ public class GameGUI : MonoBehaviour {
     public GameObject AnchoviSprite;
     public GameObject Owner;
     public GameObject[] Items = new GameObject[5];
+    public GameObject[] States = new GameObject[3];
     public GameObject scoreLabel;
 
     private GameManager gameManager;
@@ -32,5 +33,15 @@ public class GameGUI : MonoBehaviour {
     public void DeactivateItemSprite(int ID)
     {
         Items[ID].SetActive(false);
+    }
+
+    public void ActivateStateSprite(int ID)
+    {
+        States[ID].SetActive(true);
+    }
+
+    public void DeactivateStateSprite(int ID)
+    {
+        States[ID].SetActive(false);
     }
 }
